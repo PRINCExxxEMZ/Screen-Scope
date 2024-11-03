@@ -1,0 +1,74 @@
+ /* Add or adjust this in your Carousel.css */
+.relative {
+    position: relative;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .h-screen {
+    height: 100vh; /* Ensures full viewport height */
+  }
+  
+  .overflow-hidden {
+    overflow: hidden; /* Prevents scrollbars */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the slick-dots */
+.slick-dots {
+    position: absolute !important;
+    bottom: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Style each dot item */
+  .slick-dots li {
+    display: block !important;
+    margin: 0 0px !important; /* Space between each dash horizontally */
+  }
+  
+  /* Style the button inside each dot item */
+  .slick-dots li button {
+    font-size: 0 !important; /* Hide default text of the button */
+    border: none !important;
+    background: transparent !important;
+    outline: none !important; /* Remove default button outline */
+    cursor: pointer !important; /* Add a pointer cursor for better UX */
+  }
+  
+  /* Add dash before each dot button */
+  .slick-dots li button::before {
+    content: '-' !important; /* Adds a dash instead of a dot */
+    font-size: 40px !important; /* Adjust the size of the dash */
+    color: white !important; /* Default color for inactive dashes */
+    line-height: 1 !important;
+    display: inline-block !important;
+    text-align: center !important;
+  }
+  
+  /* Style the active dash */
+  .slick-dots li.slick-active button::before {
+    color: #C4B4A5 !important; /* Color for the active dash */
+  }
+  
