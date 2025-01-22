@@ -1,0 +1,6 @@
+/* Add this to your header styles */
+header {
+    z-index: 1000; /* Ensures the header is above other content */
+    position: relative;
+  }
+  
