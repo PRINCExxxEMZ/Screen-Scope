@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['NunitoFont', 'sans-serif'], // Fix syntax and add fallback
+        nunito: ['Nunito', 'sans-serif'], // Nunito setup
+        ubuntu: ['Ubuntu', 'sans-serif'], // Ubuntu setup
       },
       colors: {
         'custom-border': '#C4B4A5',

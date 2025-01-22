@@ -4,7 +4,7 @@ import Carousel from './Carousel'; // Ensure the path is correct
 
 const Home = ({ searchResult }) => {
   return (
-    <div className='relative h-screen w-full overflow-hidden '>
+    <div className='relative h-screen w-full overflow-hidden bg-[#000]'>
       <Carousel />
 
       <section className="py-8 text-center">

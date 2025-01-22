@@ -10,7 +10,7 @@ const Carousel = () => {
   const [carouselData, setCarouselData] = useState([]);
 
   useEffect(() => {
-    const desiredMovies = ['Batman', 'Batman: Caped Crusader', 'Spiderman', 'Captain Marvel', 'Inception','Superman' ];
+    const desiredMovies = ['The Batman', 'Batman Begins', 'Spider-Man: No Way Home', 'Captain Marvel', 'Thor','Superman' ];
 
     const fetchData = async (title) => {
       try {
@@ -57,27 +57,27 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative bg-black w-full h-screen overflow-hidden object-cover">
+    <div className="relative bg-black h-screen overflow-hidden w-full object-cover">
       <div className="w-full h-full">
         {carouselData.length > 0 ? (
           <Slider {...settings}>
             {carouselData.map((item, index) => (
-              <div key={index} className="relative w-full">
+              <div key={index} className="relative h-screen">
                 <img
-                      src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
                       alt={item.title}
           
-                  className="w-full h-auto  " // Ensures the image covers the full width and height
+                  className=" w-full object-cover  h-full" // Ensures the image covers the full width and height
                 />
                 <div className="absolute top-[15%]  text-[#C4B4A5] z-5 left-0 w-full h-[40%] flex flex-col justify-start items-start p-3 font-custom max-w-2xl ">
-                  <h3 className="font-extralight text-[#fff] text-[60px] mb-2 ">
+                  <h3 className=" text-[#fff] text-[60px] mb-2 font-bold">
                     {item.title.toUpperCase()}
                   </h3>
                   <div className="text-white flex gap-1 mt-4  ">
                   <p className='border-r-[1px] p-1'><strong></strong> {item.genres.map(genre => genre.name).join(', ')}</p>
                   <p className='border-r-[1px] p-1'><strong></strong> {new Date(item.release_date).getFullYear()}</p>
                   <p className='border-r-[1px] p-1'><strong></strong> {item.runtime} minutes</p>
-                  <p className=' bg-black w-[40px] flex items-center justify-center p-1'><strong></strong> {item.adult ? 'Adults Only' : '18+'}</p>
+                  <p className=' bg-[#C4B4A5] w-[40px] flex items-center justify-center p-1'><strong></strong> {item.adult ? 'Adults Only' : '18+'}</p>
                 </div>
                   <p className="text-white text-lg max-w-2xl mt-6 text-wrap">
                     {item.overview}
